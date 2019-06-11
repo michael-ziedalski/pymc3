@@ -450,10 +450,22 @@ def sample(draws=500, step=None, init='auto', n_init=200000, start=None, trace=N
             if has_population_samplers:
                 _log.info('Population sampling ({} chains)'.format(chains))
                 _print_step_hierarchy(step)
+                
+                
+                ## Custom code
+                print('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
+                    
+                    
                 trace = _sample_population(**sample_args)
             else:
                 _log.info('Sequential sampling ({} chains in 1 job)'.format(chains))
                 _print_step_hierarchy(step)
+                  
+                    
+                ## Custom code
+                print('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
+                    
+               
                 trace = _sample_many(**sample_args)
 
         discard = tune if discard_tuned_samples else 0
