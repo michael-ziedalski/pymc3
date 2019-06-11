@@ -453,7 +453,7 @@ def sample(draws=500, step=None, init='auto', n_init=200000, start=None, trace=N
                 
                 
                 ## Custom code
-                print('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
+                _log.info('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
                     
                     
                 trace = _sample_population(**sample_args)
@@ -463,7 +463,7 @@ def sample(draws=500, step=None, init='auto', n_init=200000, start=None, trace=N
                   
                     
                 ## Custom code
-                print('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
+                _log.info('\n\n\n**sample_args: \n{}\n\n'.format(**sample_args))
                     
                
                 trace = _sample_many(**sample_args)
